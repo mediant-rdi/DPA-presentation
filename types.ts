@@ -7,6 +7,8 @@ export enum SlideType {
   INTERACTIVE_QUIZ = 'INTERACTIVE_QUIZ',
   PROCESS_FLOW = 'PROCESS_FLOW',
   GRID_CARDS = 'GRID_CARDS',
+  CASE_STUDY = 'CASE_STUDY',
+  CONTENT_SLIDE = 'CONTENT_SLIDE',
   CLOSING = 'CLOSING'
 }
 
@@ -33,6 +35,12 @@ export interface SlideContent {
   quizItems?: QuizItem[];
   steps?: { title: string; desc: string }[];
   cards?: { title: string; items: string[] }[];
+  caseStudy?: {
+    scenario: string;
+    whatHappened: string[];
+    redFlags: string[];
+    lesson: string;
+  };
   footnotes?: string[];
   speakerNotes: string; // HTML allowed for formatting
 }
