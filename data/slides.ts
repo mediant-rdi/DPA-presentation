@@ -160,7 +160,7 @@ export const slides: SlideContent[] = [
     speakerNotes: "Time for round two. Internal scenarios.",
     quizItems: [
       {
-        scenario: "HR announces a colleague is out sick with 'Malaria' in the general WhatsApp group to explain their absence.",
+        scenario: "HR announces a colleague is out sick with 'Violent diarrhea' in the general WhatsApp group to explain their absence.",
         verdict: "BREACH",
         explanation: "Health status is Sensitive Personal Data. 'Out sick' is fine; specifying the disease requires consent."
       },
@@ -216,7 +216,7 @@ export const slides: SlideContent[] = [
       ],
       rightTitle: "Who to Contact",
       rightContent: [
-        "<strong>Primary:</strong> DPO@company.com",
+        "<strong>Primary:</strong> DPO@mediantinternational.com",
         "<strong>Urgent:</strong> IT Security Hotline (Ext 1234)",
         "<strong>External:</strong> Do not speak to press/social media. Refer all inquiries to Legal."
       ]
@@ -280,7 +280,7 @@ export const slides: SlideContent[] = [
     mainText: "Data Protection is not a department. It is a behavior.",
     highlightText: "Trust is our currency.",
     bullets: [
-      "Report Incidents: dpo@company.com",
+      "Report Incidents: dpo@mediantinternational.com",
       "Resource Hub: Intranet/Privacy",
       "Regulator: odpc.go.ke"
     ],
