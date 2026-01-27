@@ -292,7 +292,7 @@ export const generalSlides: SlideContent[] = [
     mainText: "Security is a state of mind, not a checklist.",
     highlightText: "Trust nothing. Verify everything.",
     bullets: [
-      "Report Suspicious Emails: phishing@company.com",
+      "Report Suspicious Emails: dpo@mediantinternational.com",
       "Lost Device? Call IT immediately.",
       "See something? Say something."
     ],
