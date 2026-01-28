@@ -56,13 +56,14 @@ export const generalSlides: SlideContent[] = [
     type: SlideType.CONTENT_SLIDE,
     title: "Weaponizing Fear",
     subtitle: "The Threat Manipulation",
+    image: "/images/phish1.png",
     mainText: "Fear bypasses rational thinking. When scared, people act first and think later.",
     bullets: [
-      "<strong>Fear of Loss:</strong> 'Your account will be closed,' 'You'll lose access,' 'Your data will be deleted'",
-      "<strong>Fear of Consequences:</strong> 'Legal action will be taken,' 'Your credit score will drop,' 'You'll be reported'",
-      "<strong>Fear of Authority:</strong> 'The CEO is asking,' 'Compliance requires this,' 'IT Security demands immediate action'"
+      "<strong>Fear of Loss:</strong> 'Your account will be closed,' 'You'll lose access'",
+      "<strong>Fear of Authority:</strong> 'The CEO is asking,' 'Compliance requires this'",
+      "<strong>Live Example:</strong> Notice the threat of 'Your email will stop working in 72 hours'."
     ],
-    speakerNotes: "Fear is the most powerful tool in an attacker's arsenal. When you're scared, your prefrontal cortex shuts down. You go into fight-or-flight mode. Scammers give you no time to think."
+    speakerNotes: "Fear is the most powerful tool in an attacker's arsenal. Look at this real example received by a team member. It threatens an immediate loss of service to force a click."
   },
   {
     type: SlideType.CASE_STUDY,
@@ -89,13 +90,14 @@ export const generalSlides: SlideContent[] = [
     type: SlideType.CONTENT_SLIDE,
     title: "The Urgency Trap",
     subtitle: "Why Deadlines Work Against You",
+    image: "/images/phish3.png",
     mainText: "Urgency removes your ability to verify. Attackers know you won't fact-check if you're racing against time.",
     bullets: [
-      "<strong>Time Pressure:</strong> 'Respond within 1 hour,' 'Act now or lose access'",
-      "<strong>Emergency Language:</strong> 'URGENT,' 'CRITICAL,' 'IMMEDIATE ATTENTION REQUIRED'",
-      "<strong>Consequence Coupling:</strong> 'If you don't act now, [bad thing] will happen'"
+      "<strong>Time Pressure:</strong> 'Respond within 1 hour,' 'Act now'",
+      "<strong>Emergency Language:</strong> 'URGENT,' 'CRITICAL,' 'IMMEDIATE ATTENTION'",
+      "<strong>Live Example:</strong> A fake password expiry notice forcing you to 'Keep My Current Password' via a malicious link."
     ],
-    speakerNotes: "Legitimate IT teams and companies don't create artificial time bombs. Fake ones always do."
+    speakerNotes: "Legitimate IT teams and companies don't create artificial time bombs. This real-life attack uses a countdown to password expiry to bypass your skepticism."
   },
   {
     type: SlideType.CASE_STUDY,
@@ -154,14 +156,80 @@ export const generalSlides: SlideContent[] = [
   {
     type: SlideType.CONTENT_SLIDE,
     title: "The Perfect Storm",
-    subtitle: "When Fear + Urgency + Curiosity Combine",
-    mainText: "The most sophisticated attacks layer all three tactics.",
+    subtitle: "When Layers Combine",
+    image: "/images/phish2.png",
+    mainText: "The most sophisticated attacks layer fear, urgency, and curiosity into a single message.",
     bullets: [
-      "<strong>FEAR:</strong> 'Complaint regarding your conduct'",
-      "<strong>URGENCY:</strong> 'You have 24 hours to respond'",
-      "<strong>CURIOSITY:</strong> 'Click here to access the confidential complaint'"
+      "<strong>FEAR:</strong> 'Avoid account restrictions.'",
+      "<strong>URGENCY:</strong> 'Within 24 hours.'",
+      "<strong>CURIOSITY:</strong> 'Verifying email addresses associated with compliance.'",
+      "<strong>REAL ATTACK:</strong> This email was sent to our info@ address to harvest credentials."
     ],
-    speakerNotes: "By the time you click, you're not thinking about security—you're thinking about your job."
+    speakerNotes: "Notice how this real-world example uses 'Regulatory Compliance' to sound official, '24 hours' to rush you, and 'Avoid restrictions' to scare you into clicking."
+  },
+  {
+    type: SlideType.GRID_CARDS,
+    title: "Expert Advice: Google Safety",
+    subtitle: "Protect Your Digital Life",
+    cards: [
+      {
+        title: "Account Security",
+        items: [
+          "Use a strong, unique password for every account.",
+          "Enable 2nd-Step Verification (2SV).",
+          "Perform a periodic Google Security Checkup."
+        ]
+      },
+      {
+        title: "Browse Safely",
+        items: [
+          "Check for 'https://' and the lock icon.",
+          "Don't ignore browser warnings about unsafe sites.",
+          "Keep your Chrome browser updated."
+        ]
+      },
+      {
+        title: "Communication",
+        items: [
+          "Be skeptical of unsolicited messages.",
+          "Don't share private info in response to emails.",
+          "Report phishing emails immediately."
+        ]
+      }
+    ],
+    speakerNotes: "Google's safety tips emphasize that security starts with strong authentication and constant vigilance when browsing."
+  },
+  {
+    type: SlideType.GRID_CARDS,
+    title: "Kaspersky's Top Rules",
+    subtitle: "Preemptive Safety Essentials",
+    cards: [
+      {
+        title: "Personal Data",
+        items: [
+          "Keep professional and personal data separate.",
+          "Be cautious about what you share on social media.",
+          "Use a Password Manager."
+        ]
+      },
+      {
+        title: "Network & Devices",
+        items: [
+          "Avoid using public Wi-Fi for sensitive tasks.",
+          "Always use a VPN.",
+          "Keep all software and OS updated."
+        ]
+      },
+      {
+        title: "External Risks",
+        items: [
+          "Never click on suspicious links or attachments.",
+          "Be wary of 'too good to be true' offers.",
+          "Disable auto-run on USB devices."
+        ]
+      }
+    ],
+    speakerNotes: "Kaspersky's research highlights the importance of separating work and life, and never trusting public networks."
   },
   {
     type: SlideType.INTERACTIVE_QUIZ,
@@ -292,10 +360,11 @@ export const generalSlides: SlideContent[] = [
     mainText: "Security is a state of mind, not a checklist.",
     highlightText: "Trust nothing. Verify everything.",
     bullets: [
-      "Report Suspicious Emails: dpo@mediantinternational.com",
-      "Lost Device? Call IT immediately.",
-      "See something? Say something."
+      "Report Phishing: phishing@mediantinternational.com",
+      "Google Safety: safety.google/security-tips/",
+      "Kaspersky Tips: bit.ly/kaspersky-safety",
+      "Watch: Kevin Mitnick - Art of Deception (YouTube)"
     ],
-    speakerNotes: "Thank you. Stay safe out there."
+    speakerNotes: "Thank you. Stay safe out there. Check the resources on the slide for deeper learning."
   }
 ];

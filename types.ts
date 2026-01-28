@@ -22,6 +22,7 @@ export interface SlideContent {
   title: string;
   subtitle?: string;
   type: SlideType;
+  image?: string;
   bullets?: string[];
   mainText?: string;
   highlightStat?: string;

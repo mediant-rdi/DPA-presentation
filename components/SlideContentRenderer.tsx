@@ -11,10 +11,10 @@ const QuizCard: React.FC<{ item: QuizItem; index: number }> = ({ item, index }) 
   return (
     <div
       className={`border-l-4 p-4 md:p-6 cursor-pointer transition-all duration-300 relative overflow-hidden group ${revealed
-          ? item.verdict === 'BREACH'
-            ? 'bg-red-50 border-red-500'
-            : 'bg-emerald-50 border-emerald-500'
-          : 'bg-white border-slate-300 hover:border-blue-500 hover:shadow-md'
+        ? item.verdict === 'BREACH'
+          ? 'bg-red-50 border-red-500'
+          : 'bg-emerald-50 border-emerald-500'
+        : 'bg-white border-slate-300 hover:border-blue-500 hover:shadow-md'
         }`}
       onClick={() => setRevealed(true)}
     >
@@ -22,8 +22,8 @@ const QuizCard: React.FC<{ item: QuizItem; index: number }> = ({ item, index }) 
         <span className="text-slate-400 text-xs sm:text-sm font-serif uppercase tracking-widest">Scenario {index + 1}</span>
         {revealed ? (
           <span className={`px-3 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm font-bold uppercase tracking-wider border ${item.verdict === 'BREACH'
-              ? 'text-red-700 border-red-200 bg-red-100'
-              : 'text-emerald-700 border-emerald-200 bg-emerald-100'
+            ? 'text-red-700 border-red-200 bg-red-100'
+            : 'text-emerald-700 border-emerald-200 bg-emerald-100'
             }`}>
             {item.verdict}
           </span>
@@ -297,20 +297,38 @@ export const SlideContentRenderer: React.FC<Props> = ({ data }) => {
     case SlideType.CONTENT_SLIDE:
     default: // BULLET_LIST fallback
       return (
-        <div className="min-h-full flex flex-col justify-center max-w-5xl mx-auto py-10">
+        <div className="min-h-full flex flex-col justify-center max-w-7xl mx-auto py-10">
           <div className="mb-10 sm:mb-16 border-l-4 sm:border-l-8 border-emerald-900 pl-6 sm:pl-10">
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-slate-900 mb-4">{data.title}</h2>
             {data.subtitle && <p className="text-2xl sm:text-3xl md:text-4xl text-blue-900 italic font-serif">{data.subtitle}</p>}
           </div>
 
-          <ul className="space-y-6 sm:space-y-10">
-            {data.bullets?.map((b, i) => (
-              <li key={i} className="flex items-start text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-700 leading-relaxed font-light">
-                <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 bg-emerald-900 mt-3 sm:mt-4 mr-6 sm:mr-8 flex-shrink-0"></span>
-                <span dangerouslySetInnerHTML={{ __html: b }} />
-              </li>
-            ))}
-          </ul>
+          <div className={`grid grid-cols-1 ${data.image ? 'lg:grid-cols-2 items-center' : ''} gap-12`}>
+            <div className="space-y-6 sm:space-y-10">
+              {data.mainText && <p className="text-xl sm:text-2xl md:text-3xl text-slate-600 mb-6 leading-relaxed font-light italic">{data.mainText}</p>}
+              <ul className="space-y-6 sm:space-y-10">
+                {data.bullets?.map((b, i) => (
+                  <li key={i} className="flex items-start text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-700 leading-relaxed font-light">
+                    <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 bg-emerald-900 mt-3 sm:mt-4 mr-6 sm:mr-8 flex-shrink-0"></span>
+                    <span dangerouslySetInnerHTML={{ __html: b }} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {data.image && (
+              <div className="relative group p-2">
+                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                <img
+                  src={data.image}
+                  alt={data.title}
+                  className="relative bg-white rounded-lg shadow-2xl border border-slate-200 w-full object-contain max-h-[65vh]"
+                />
+                <div className="mt-4 text-center">
+                  <span className="text-sm font-bold uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 border border-red-100">Live Company Example</span>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       );
   }
